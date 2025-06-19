@@ -26,6 +26,7 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+    window.scrollTo(0, 0);
 
     const skipLinkElem = document.querySelector('.skip_link');
     skipLinkElem.addEventListener('click', (event) => {
