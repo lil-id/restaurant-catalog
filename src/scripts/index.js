@@ -1,34 +1,21 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-import '../styles/responsive.css';
-import './component/restaurantList';
-import DataSource from '../public/data/DATA.json';
+import '../styles/mainResponsive.css';
+import '../styles/detailResponsive.css';
+import App from './views/app';
+import swRegister from './utils/serviceWorkerRegister';
 
-const main = () => {
-  const mainElement = document.querySelector('main');
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  const navMenu = document.querySelector('.navbar_list');
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('.navbar_list'),
+  content: document.querySelector('#app'),
+});
 
-  hamburgerMenu.addEventListener('click', () => {
-    hamburgerMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
 
-  document.querySelectorAll('.navbar_item').forEach((item) =>
-    item.addEventListener('click', () => {
-      hamburgerMenu.classList.remove('active');
-      navMenu.classList.remove('active');
-    })
-  );
-
-  mainElement.addEventListener('click', () => {
-    hamburgerMenu.classList.remove('active');
-    navMenu.classList.remove('active');
-  });
-
-  const foodListElement = document.querySelector('restaurant-list');
-
-  foodListElement.restaurants = DataSource.restaurants;
-};
-
-document.addEventListener('DOMContentLoaded', main);
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
+});

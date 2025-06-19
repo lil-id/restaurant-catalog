@@ -1,0 +1,22 @@
+{
+    "id": "restaurant-catalog",
+    "start_url": "./index.html",
+    "name": "Yowes Resto",
+    "short_name": "YoR",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/icons/192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

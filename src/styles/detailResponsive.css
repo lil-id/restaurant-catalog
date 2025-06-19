@@ -1,0 +1,115 @@
+/* Mobile Screen */
+
+@media screen and (max-width: 767px) {
+
+    .restaurant_detail {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+        justify-items: center;
+    }
+
+    .detail_container {
+        height: max-content;
+        width: 330px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 230px 480px 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-items: center;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        row-gap: 10px;
+    }
+
+    .detail_restaurant_image {
+        width: 290px;
+        border-radius: 10px;
+    }
+
+    .restaurant_name {
+        font-size: 20px;
+        justify-self: center;
+    }
+
+    .detail_container_rating_location {
+        font-size: 14px;
+        font-weight: 500;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 20px 35px 20px auto;
+    }
+
+    .restaurant_info {
+        width: 290px;
+        display: grid;
+        row-gap: 10px;
+    }
+
+    .detail_description {
+        text-align: justify;
+        font-size: 14px;
+        color: rgb(65, 65, 65);
+    }
+
+    .likeButtonContainer {
+        margin-right: 40px;
+    }
+
+    /* Menu */
+
+    .restaurant_menu {
+        height: max-content;
+        width: 330px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 30px);
+        padding: 20px 0;
+        justify-items: center;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    .food_menu {
+        color: #212529;
+        font-size: 16px;
+        margin-left: 50px;
+        justify-self: flex-start;
+    }
+
+    .drink_menu {
+        color: #212529;
+        font-size: 16px;
+        margin-left: 50px;
+        justify-self: flex-start;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1325px) {
+
+    .restaurant_detail {
+        display: grid;
+        grid-template-columns: repeat(1, 500px);
+        row-gap: 35px;
+    }
+
+    .detail_restaurant_image {
+        width: 400px;
+    }
+
+    .detail_container {
+        height: max-content;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 310px 510px 60px;
+    }
+
+    .restaurant_info {
+        width: 400px;
+    }
+}
